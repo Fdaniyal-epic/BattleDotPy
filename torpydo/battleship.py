@@ -157,29 +157,131 @@ def initialize_myFleet():
 def initialize_enemyFleet():
     global enemyFleet
 
-    enemyFleet = GameController.initialize_ships()
+    enemyFleet = random.choice([enemyFleet0, enemyFleet1, enemyFleet2, enemyFleet3, enemyFleet4])
+    # preset 1
+    enemyFleet0 = GameController.initialize_ships()
 
-    enemyFleet[0].positions.append(Position(Letter.B, 4))
-    enemyFleet[0].positions.append(Position(Letter.B, 5))
-    enemyFleet[0].positions.append(Position(Letter.B, 6))
-    enemyFleet[0].positions.append(Position(Letter.B, 7))
-    enemyFleet[0].positions.append(Position(Letter.B, 8))
+    enemyFleet0[0].positions.append(Position(Letter.B, 4))
+    enemyFleet0[0].positions.append(Position(Letter.B, 5))
+    enemyFleet0[0].positions.append(Position(Letter.B, 6))
+    enemyFleet0[0].positions.append(Position(Letter.B, 7))
+    enemyFleet0[0].positions.append(Position(Letter.B, 8))
 
-    enemyFleet[1].positions.append(Position(Letter.E, 6))
-    enemyFleet[1].positions.append(Position(Letter.E, 7))
-    enemyFleet[1].positions.append(Position(Letter.E, 8))
-    enemyFleet[1].positions.append(Position(Letter.E, 9))
+    enemyFleet0[1].positions.append(Position(Letter.E, 6))
+    enemyFleet0[1].positions.append(Position(Letter.E, 7))
+    enemyFleet0[1].positions.append(Position(Letter.E, 8))
+    enemyFleet0[1].positions.append(Position(Letter.E, 9))
 
-    enemyFleet[2].positions.append(Position(Letter.A, 3))
-    enemyFleet[2].positions.append(Position(Letter.B, 3))
-    enemyFleet[2].positions.append(Position(Letter.C, 3))
+    enemyFleet0[2].positions.append(Position(Letter.A, 3))
+    enemyFleet0[2].positions.append(Position(Letter.B, 3))
+    enemyFleet0[2].positions.append(Position(Letter.C, 3))
 
-    enemyFleet[3].positions.append(Position(Letter.F, 8))
-    enemyFleet[3].positions.append(Position(Letter.G, 8))
-    enemyFleet[3].positions.append(Position(Letter.H, 8))
+    enemyFleet0[3].positions.append(Position(Letter.F, 8))
+    enemyFleet0[3].positions.append(Position(Letter.G, 8))
+    enemyFleet0[3].positions.append(Position(Letter.H, 8))
 
-    enemyFleet[4].positions.append(Position(Letter.C, 5))
-    enemyFleet[4].positions.append(Position(Letter.C, 6))
+    enemyFleet0[4].positions.append(Position(Letter.C, 5))
+    enemyFleet0[4].positions.append(Position(Letter.C, 6))
+
+    # preset 2
+    enemyFleet1 = GameController.initialize_ships()
+
+    enemyFleet1[0].positions.append(Position(Letter.H, 5))
+    enemyFleet1[0].positions.append(Position(Letter.H, 6))
+    enemyFleet1[0].positions.append(Position(Letter.H, 7))
+    enemyFleet1[0].positions.append(Position(Letter.H, 8))
+    enemyFleet1[0].positions.append(Position(Letter.H, 9))
+
+    enemyFleet1[1].positions.append(Position(Letter.A, 7))
+    enemyFleet1[1].positions.append(Position(Letter.A, 8))
+    enemyFleet1[1].positions.append(Position(Letter.A, 9))
+    enemyFleet1[1].positions.append(Position(Letter.A, 10))
+
+    enemyFleet1[2].positions.append(Position(Letter.C, 1))
+    enemyFleet1[2].positions.append(Position(Letter.C, 2))
+    enemyFleet1[2].positions.append(Position(Letter.C, 3))
+
+    enemyFleet1[3].positions.append(Position(Letter.E, 2))
+    enemyFleet1[3].positions.append(Position(Letter.E, 3))
+    enemyFleet1[3].positions.append(Position(Letter.E, 4))
+
+    enemyFleet1[4].positions.append(Position(Letter.A, 4))
+    enemyFleet1[4].positions.append(Position(Letter.A, 5))
+
+    # preset 3
+    enemyFleet2 = GameController.initialize_ships()
+
+    enemyFleet2[0].positions.append(Position(Letter.F, 10))
+    enemyFleet2[0].positions.append(Position(Letter.G, 10))
+    enemyFleet2[0].positions.append(Position(Letter.H, 10))
+    enemyFleet2[0].positions.append(Position(Letter.I, 10))
+    enemyFleet2[0].positions.append(Position(Letter.J, 10))
+
+    enemyFleet2[1].positions.append(Position(Letter.J, 3))
+    enemyFleet2[1].positions.append(Position(Letter.J, 4))
+    enemyFleet2[1].positions.append(Position(Letter.J, 5))
+    enemyFleet2[1].positions.append(Position(Letter.J, 6))
+
+    enemyFleet2[2].positions.append(Position(Letter.A, 7))
+    enemyFleet2[2].positions.append(Position(Letter.B, 7))
+    enemyFleet2[2].positions.append(Position(Letter.C, 7))
+
+    enemyFleet2[3].positions.append(Position(Letter.E, 7))
+    enemyFleet2[3].positions.append(Position(Letter.E, 8))
+    enemyFleet2[3].positions.append(Position(Letter.E, 9))
+
+    enemyFleet2[4].positions.append(Position(Letter.C, 3))
+    enemyFleet2[4].positions.append(Position(Letter.D, 3))
+
+    # preset 4
+    enemyFleet3 = GameController.initialize_ships()
+
+    enemyFleet3[0].positions.append(Position(Letter.D, 6))
+    enemyFleet3[0].positions.append(Position(Letter.E, 6))
+    enemyFleet3[0].positions.append(Position(Letter.F, 6))
+    enemyFleet3[0].positions.append(Position(Letter.G, 6))
+    enemyFleet3[0].positions.append(Position(Letter.H, 6))
+
+    enemyFleet3[1].positions.append(Position(Letter.D, 8))
+    enemyFleet3[1].positions.append(Position(Letter.E, 8))
+    enemyFleet3[1].positions.append(Position(Letter.F, 8))
+    enemyFleet3[1].positions.append(Position(Letter.G, 8))
+
+    enemyFleet3[2].positions.append(Position(Letter.A, 3))
+    enemyFleet3[2].positions.append(Position(Letter.A, 4))
+    enemyFleet3[2].positions.append(Position(Letter.A, 5))
+
+    enemyFleet3[3].positions.append(Position(Letter.I, 2))
+    enemyFleet3[3].positions.append(Position(Letter.I, 3))
+    enemyFleet3[3].positions.append(Position(Letter.I, 4))
+
+    enemyFleet3[4].positions.append(Position(Letter.F, 2))
+    enemyFleet3[4].positions.append(Position(Letter.G, 2))
+
+    # preset 5
+    enemyFleet4 = GameController.initialize_ships()
+
+    enemyFleet4[0].positions.append(Position(Letter.A, 1))
+    enemyFleet4[0].positions.append(Position(Letter.B, 2))
+    enemyFleet4[0].positions.append(Position(Letter.C, 3))
+    enemyFleet4[0].positions.append(Position(Letter.D, 4))
+    enemyFleet4[0].positions.append(Position(Letter.E, 5))
+
+    enemyFleet4[1].positions.append(Position(Letter.J, 3))
+    enemyFleet4[1].positions.append(Position(Letter.J, 4))
+    enemyFleet4[1].positions.append(Position(Letter.J, 5))
+    enemyFleet4[1].positions.append(Position(Letter.J, 6))
+
+    enemyFleet4[2].positions.append(Position(Letter.A, 7))
+    enemyFleet4[2].positions.append(Position(Letter.B, 7))
+    enemyFleet4[2].positions.append(Position(Letter.C, 7))
+
+    enemyFleet4[3].positions.append(Position(Letter.F, 9))
+    enemyFleet4[3].positions.append(Position(Letter.G, 9))
+    enemyFleet4[3].positions.append(Position(Letter.H, 9))
+
+    enemyFleet4[4].positions.append(Position(Letter.F, 6))
+    enemyFleet4[4].positions.append(Position(Letter.G, 6))
 
 if __name__ == '__main__':
     main()
