@@ -62,7 +62,7 @@ def start_game():
         position = parse_position(input("Enter coordinates for your shot :"))
         is_hit = GameController.check_is_hit(enemyFleet, position)
         if is_hit:
-            print(r'''
+            print(Fore.RED + r'''
                 \          .  ./
               \   .:"";'.:..""   /
                  (M^^.^~~:.'"").
@@ -70,7 +70,19 @@ def start_game():
                ((| :. ~ ^  :. .|))
             -   (\- |  \ /  |  /)  -
                  -\  \     /  /-
-                   \  \   /  /''')
+                   \  \   /  /''' + Style.RESET_ALL)
+            
+        else:
+            print(Fore.BLUE + r'''
+                \          .  ./
+              \   .:"";'.:..""   /
+                 (M^^.^~~:.'"").
+            -   (/  .    . . \ \)  -
+               ((| :. ~ ^  :. .|))
+            -   (\- |  \ /  |  /)  -
+                 -\  \     /  /-
+                   \  \   /  /''' + Style.RESET_ALL)
+
         # print(enemyFleet)
         print("Yeah ! Nice hit !" if is_hit else "Miss")
         TelemetryClient.trackEvent('Player_ShootPosition', {'custom_dimensions': {'Position': str(position), 'IsHit': is_hit}})
@@ -81,7 +93,7 @@ def start_game():
         print(f"Computer shoot in {str(position)} and {'hit your ship!' if is_hit else 'miss'}")
         TelemetryClient.trackEvent('Computer_ShootPosition', {'custom_dimensions': {'Position': str(position), 'IsHit': is_hit}})
         if is_hit:
-            print(r'''
+            print(Fore.RED + r'''
                 \          .  ./
               \   .:"";'.:..""   /
                  (M^^.^~~:.'"").
@@ -89,7 +101,18 @@ def start_game():
                ((| :. ~ ^  :. .|))
             -   (\- |  \ /  |  /)  -
                  -\  \     /  /-
-                   \  \   /  /''')
+                   \  \   /  /''' + Style.RESET_ALL)
+            
+        else:
+            print(Fore.BLUE + r'''
+                \          .  ./
+              \   .:"";'.:..""   /
+                 (M^^.^~~:.'"").
+            -   (/  .    . . \ \)  -
+               ((| :. ~ ^  :. .|))
+            -   (\- |  \ /  |  /)  -
+                 -\  \     /  /-
+                   \  \   /  /''' + Style.RESET_ALL)
 
 def parse_position(input: str):
     letter = Letter[input.upper()[:1]]
